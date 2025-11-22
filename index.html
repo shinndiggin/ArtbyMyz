@@ -3,347 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art by Myz</title>
-  <style>
-    :root {
-      --gold: #F6BE00;       /* Pantone 7408 C */
-      --dark-gray: #373A36;  /* Pantone 447 C */
-      --light-gray: #D9D9D6; /* Pantone Cool Gray 1 C */
-    }
-
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: var(--light-gray);
-      color: var(--dark-gray);
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: var(--dark-gray);
-      color: var(--gold);
-      padding: 25px 0;
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    nav {
-      background-color: var(--gold);
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px 0;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--dark-gray);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease, transform 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #000;
-      transform: scale(1.05);
-    }
-
-    /* Featured layout */
-    .featured-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 30px;
-      max-width: 1300px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .instagram-box {
-      flex: 1 1 30%;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-      min-width: 300px;
-    }
-
-    .instagram-box h2 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: var(--dark-gray);
-    }
-
-    .instagram-box iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .square-items {
-      flex: 1 1 60%;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-      text-align: center;
-      min-width: 350px;
-    }
-
-    .square-items h2 {
-      color: var(--dark-gray);
-      margin-bottom: 25px;
-      font-size: 24px;
-    }
-
-    .square-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-
-    .square-card,
-    .teepublic-card {
-      background-color: #fff;
-      border: 1px solid var(--light-gray);
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      overflow: hidden;
-      width: 100%;
-      max-width: 300px;
-    }
-
-    .square-card:hover,
-    .teepublic-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    .square-card img,
-    .teepublic-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .info {
-      padding: 15px;
-    }
-
-    .info h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: var(--dark-gray);
-    }
-
-    .info p {
-      color: #666;
-      font-size: 14px;
-      margin: 0 0 15px;
-    }
-
-    .info a {
-      display: inline-block;
-      background-color: var(--gold);
-      color: var(--dark-gray);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-
-    .info a:hover {
-      background-color: #e5ae00;
-    }
-
-    /* TeePublic section */
-    .teepublic-section {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 30px;
-      margin: 20px auto 40px;
-      max-width: 1200px;
-      text-align: center;
-    }
-
-    .teepublic-section h2 {
-      color: var(--dark-gray);
-      margin-bottom: 25px;
-      font-size: 24px;
-    }
-
-    .teepublic-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery-item {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .caption {
-      padding: 15px;
-      font-size: 16px;
-      text-align: center;
-      color: var(--dark-gray);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--dark-gray);
-      color: var(--gold);
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .featured-section {
-        flex-direction: column;
-        align-items: center;
-      }
-      .instagram-box,
-      .square-items {
-        width: 100%;
-        max-width: 700px;
-      }
-      .instagram-box iframe {
-        height: 500px;
-      }
-    }
-  </style>
+  <title>Art by Myz – Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="Upload/Assets/banner_w.png" alt="Art by Myz" style="max-width: 100%; height: auto;">
-  </header>
 
-  <nav>
-    <a href="https://www.teepublic.com/user/artbymyz" target="_blank">TeePublic</a>
-    <a href="https://artbymyz.square.site" target="_blank">Square Shop</a>
-    <a href="https://www.instagram.com/artbymyz_official?igsh=eno0aXBhZzVtcjIy" target="_blank">Instagram</a>
-  </nav>
+<!-- Mobile Menu Button + Overlay -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+</div>
 
-  <!-- Featured Area -->
-  <section class="featured-section">
-    <div class="instagram-box">
-      <h2>Featured on Instagram</h2>
-      <iframe 
-        src="https://www.instagram.com/artbymyz_official/embed"
-        allowtransparency="true"
-        scrolling="yes"
-        loading="lazy">
-      </iframe>
-    </div>
+<header>
+  <img src="Upload/Assets/banner_w.png" alt="Art by Myz">
+</header>
 
-    <div class="square-items">
-      <h2>Featured Items from Square Shop</h2>
-      <div class="square-grid">
-        <div class="square-card">
-          <img src="https://via.placeholder.com/300x300.png?text=Product+1" alt="Product 1">
-          <div class="info">
-            <h3>Canvas Print</h3>
-            <p>High-quality print featuring Myz’s original design.</p>
-            <a href="https://artbymyz.square.site" target="_blank">View Item</a>
-          </div>
-        </div>
-        <div class="square-card">
-          <img src="https://via.placeholder.com/300x300.png?text=Product+2" alt="Product 2">
-          <div class="info">
-            <h3>Sticker Pack</h3>
-            <p>Set of 5 unique Myz stickers printed on durable vinyl.</p>
-            <a href="https://artbymyz.square.site" target="_blank">View Item</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <!-- TeePublic Featured Section -->
-  <section class="teepublic-section">
-    <h2>Featured from TeePublic</h2>
-    <div class="teepublic-grid">
-      <div class="teepublic-card">
-        <img src="https://img.teepublic.com/t-shirt-previews/22820590_1.jpg" alt="TeePublic Design 1">
-        <div class="info">
-          <h3>Design #1</h3>
-          <p>Available as T-shirts, hoodies, stickers, and more!</p>
-          <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
-        </div>
-      </div>
-      <div class="teepublic-card">
-        <img src="https://img.teepublic.com/t-shirt-previews/22820591_1.jpg" alt="TeePublic Design 2">
-        <div class="info">
-          <h3>Design #2</h3>
-          <p>Show off your style with this Myz original design.</p>
-          <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
-        </div>
-      </div>
-      <div class="teepublic-card">
-        <img src="https://img.teepublic.com/t-shirt-previews/22820592_1.jpg" alt="TeePublic Design 3">
-        <div class="info">
-          <h3>Design #3</h3>
-          <p>Available in multiple colors and print options.</p>
-          <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="page-title">
+  <h1>Art by Myz</h1>
+  <p>Digital art, merch-ready designs, and creative experiments from Joshua “Myz” Irvine.</p>
+</section>
 
-  <!-- Gallery -->
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x400.png?text=Artwork+1" alt="Artwork 1">
-      <div class="caption">Artwork Title 1</div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x400.png?text=Artwork+2" alt="Artwork 2">
-      <div class="caption">Artwork Title 2</div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x400.png?text=Artwork+3" alt="Artwork 3">
-      <div class="caption">Artwork Title 3</div>
-    </div>
+<!-- Featured Area -->
+<section class="featured-section">
+  <div class="instagram-box">
+    <h2>Featured on Instagram</h2>
+    <iframe 
+      src="https://www.instagram.com/artbymyz_official/embed"
+      allowtransparency="true"
+      scrolling="yes"
+      loading="lazy">
+    </iframe>
   </div>
 
-  <footer>© 2025 Art by Myz — Proof of Concept by Joshua myz7</footer>
+  <div class="square-items">
+    <h2>Featured Items from Square Shop</h2>
+    <div class="square-grid">
+      <div class="square-card">
+        <img src="https://via.placeholder.com/300x300.png?text=Canvas+Print" alt="Canvas Print">
+        <div class="info">
+          <h3>Canvas Print</h3>
+          <p>High-quality print featuring an original Myz illustration.</p>
+          <a href="https://artbymyz.square.site" target="_blank">View Item</a>
+        </div>
+      </div>
+      <div class="square-card">
+        <img src="https://via.placeholder.com/300x300.png?text=Sticker+Pack" alt="Sticker Pack">
+        <div class="info">
+          <h3>Sticker Pack</h3>
+          <p>Durable vinyl stickers for water bottles, laptops, and more.</p>
+          <a href="https://artbymyz.square.site" target="_blank">View Item</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TeePublic Featured Section -->
+<section class="teepublic-section">
+  <h2>Featured from TeePublic</h2>
+  <div class="teepublic-grid">
+    <div class="teepublic-card">
+      <img src="https://img.teepublic.com/t-shirt-previews/22820590_1.jpg" alt="TeePublic Design 1">
+      <div class="info">
+        <h3>Design #1</h3>
+        <p>Available as T-shirts, hoodies, stickers, and more.</p>
+        <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
+      </div>
+    </div>
+    <div class="teepublic-card">
+      <img src="https://img.teepublic.com/t-shirt-previews/22820591_1.jpg" alt="TeePublic Design 2">
+      <div class="info">
+        <h3>Design #2</h3>
+        <p>Bold artwork ready for apparel and accessories.</p>
+        <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
+      </div>
+    </div>
+    <div class="teepublic-card">
+      <img src="https://img.teepublic.com/t-shirt-previews/22820592_1.jpg" alt="TeePublic Design 3">
+      <div class="info">
+        <h3>Design #3</h3>
+        <p>Original design in multiple color and style options.</p>
+        <a href="https://www.teepublic.com/user/artbymyz" target="_blank">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Simple Gallery Preview -->
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="https://via.placeholder.com/400x400.png?text=Artwork+1" alt="Artwork 1">
+    <div class="caption">Artwork Title 1</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://via.placeholder.com/400x400.png?text=Artwork+2" alt="Artwork 2">
+    <div class="caption">Artwork Title 2</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://via.placeholder.com/400x400.png?text=Artwork+3" alt="Artwork 3">
+    <div class="caption">Artwork Title 3</div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Art by Myz — Proof of Concept by Joshua myz7
+  ·
+  <a href="privacy.html">Privacy Policy</a>
+  |
+  <a href="terms.html">Terms &amp; Conditions</a>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>

@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- Mobile Menu -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 <div id="mobileMenu" class="mobile-menu">
   <a href="index.html">Home</a>
@@ -18,6 +17,8 @@
   <a href="commissions.html">Commissions</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
 </div>
 
 <header>
@@ -36,37 +37,34 @@
 
 <section class="page-title">
   <h1>Commissions</h1>
-  <p>Custom artwork created in the signature Myz style.</p>
+  <p>Custom artwork in the signature Myz style.</p>
 </section>
 
 <div class="contact-container">
-
   <h2>Commission Options</h2>
-  <p>Select the type of artwork that best fits your vision.</p>
+  <p>Pricing may vary with complexity, backgrounds, or additional characters.</p>
 
   <div class="faq-item">
-    <h3>✔ Character Portrait – $45+</h3>
-    <p>Head or bust illustration designed with clean lines and stylized shading.</p>
+    <h3>Character Portrait – $45+</h3>
+    <p>Head or bust illustration with expressive linework and stylized shading.</p>
   </div>
 
   <div class="faq-item">
-    <h3>✔ Full Body Character – $75+</h3>
-    <p>Complete stylized character with pose and expression.</p>
+    <h3>Full Body Character – $75+</h3>
+    <p>Full character pose with clean rendering. Ideal for avatars, stream art, or personal use.</p>
   </div>
 
   <div class="faq-item">
-    <h3>✔ Merch / Apparel Design – $120+</h3>
-    <p>Made for shirts, stickers, and branding. Includes transparent & print-ready files.</p>
+    <h3>Merch / Apparel Design – $120+</h3>
+    <p>Designed with print in mind. Includes high-res and transparent files for shirts and stickers.</p>
   </div>
 
   <div class="faq-item">
-    <h3>✔ Logo or Brand Icon – $150+</h3>
-    <p>Vector-based, scalable, and professional-grade.</p>
+    <h3>Logo / Brand Icon – $150+</h3>
+    <p>Vector-based logo or icon suitable for branding, channels, or events.</p>
   </div>
 
-  <br>
-
-  <h2>Submit a Commission Request</h2>
+  <h2 style="margin-top:25px;">Submit a Commission Request</h2>
 
   <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="contact-form">
     <input type="hidden" name="_captcha" value="false">
@@ -78,17 +76,22 @@
     <input type="email" name="email" required>
 
     <label>Commission Type</label>
-    <input type="text" name="type" placeholder="Ex: Full Body Character" required>
+    <input type="text" name="type" placeholder="Ex: Full Body Character, Logo" required>
 
     <label>Project Details</label>
-    <textarea name="message" rows="6" required></textarea>
+    <textarea name="message" rows="6" placeholder="Tell me about your idea, mood, colors, and any references." required></textarea>
 
     <button type="submit">Submit Request</button>
   </form>
-
 </div>
 
-<footer>© 2025 Art by Myz</footer>
+<footer>
+  © 2025 Art by Myz
+  ·
+  <a href="privacy.html">Privacy Policy</a>
+  |
+  <a href="terms.html">Terms &amp; Conditions</a>
+</footer>
 
 <script>
 function toggleMenu() {

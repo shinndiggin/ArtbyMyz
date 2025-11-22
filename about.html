@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Art by Myz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <img src="Upload/Assets/banner_w.png" alt="Art by Myz" style="max-width: 100%; height: auto;">
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+</div>
 
-  <section class="about-wrapper">
-    <div class="about-container">
-      <img src="Upload/Assets/profile.png" alt="Artist Portrait" class="about-img">
+<header>
+  <img src="Upload/Assets/banner_w.png" alt="Art by Myz">
+</header>
 
-      <div class="about-text">
-        <h1>About the Artist</h1>
-        <p>
-          Welcome to <strong>Art by Myz</strong> — a space where digital art, creativity, 
-          and imagination take shape. My name is <strong>Joshua “Myz” Irvine</strong>, a Colorado-based 
-          digital artist who specializes in bold illustrations, character concept art, and 
-          unique graphic designs inspired by gaming, fantasy, and modern pop culture.
-        </p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-        <p>
-          My work blends vibrant color palettes, stylized elements, and a love for expressive 
-          character storytelling. Whether I'm creating merch designs, prints, or one-of-a-kind 
-          commissions, I pour passion into each piece.
-        </p>
+<section class="page-title">
+  <h1>About the Artist</h1>
+</section>
 
-        <p>
-          Thank you for supporting my art journey—and welcome to the world of Myz.
-        </p>
-      </div>
+<section class="about-wrapper">
+  <div class="about-container">
+    <img src="Upload/Assets/profile.png" alt="Artist Portrait" class="about-img">
+
+    <div class="about-text">
+      <h1>Joshua “Myz” Irvine</h1>
+      <p>
+        Welcome to <strong>Art by Myz</strong> — a space where digital illustration,
+        gaming influences, and bold graphic design collide.
+      </p>
+      <p>
+        I’m Joshua, a Colorado-based digital artist who loves building stylized
+        characters, merch-ready graphics, and expressive designs inspired by
+        fantasy, sci-fi, and modern pop culture.
+      </p>
+      <p>
+        My work lives across prints, stickers, apparel, and digital commissions.
+        Whether it’s a single character portrait or a full collection of designs,
+        I strive to make each piece feel intentional, energetic, and uniquely “Myz.”
+      </p>
+      <p>
+        Thank you for stopping by, supporting independent art, and being part of
+        this creative experiment.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>© 2025 Art by Myz — Created by Joshua</footer>
+<footer>
+  © 2025 Art by Myz
+  ·
+  <a href="privacy.html">Privacy Policy</a>
+  |
+  <a href="terms.html">Terms &amp; Conditions</a>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
