@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commissions – Art by Myz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Mobile Menu -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header>
+  <img src="Upload/Assets/banner_w.png" alt="Art by Myz">
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="page-title">
+  <h1>Commissions</h1>
+  <p>Custom artwork created in the signature Myz style.</p>
+</section>
+
+<div class="contact-container">
+
+  <h2>Commission Options</h2>
+  <p>Select the type of artwork that best fits your vision.</p>
+
+  <div class="faq-item">
+    <h3>✔ Character Portrait – $45+</h3>
+    <p>Head or bust illustration designed with clean lines and stylized shading.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>✔ Full Body Character – $75+</h3>
+    <p>Complete stylized character with pose and expression.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>✔ Merch / Apparel Design – $120+</h3>
+    <p>Made for shirts, stickers, and branding. Includes transparent & print-ready files.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>✔ Logo or Brand Icon – $150+</h3>
+    <p>Vector-based, scalable, and professional-grade.</p>
+  </div>
+
+  <br>
+
+  <h2>Submit a Commission Request</h2>
+
+  <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="contact-form">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Commission Type</label>
+    <input type="text" name="type" placeholder="Ex: Full Body Character" required>
+
+    <label>Project Details</label>
+    <textarea name="message" rows="6" required></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+</div>
+
+<footer>© 2025 Art by Myz</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
