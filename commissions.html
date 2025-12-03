@@ -14,7 +14,7 @@
   <a href="shop.html">Shop</a>
   <a href="gallery.html">Gallery</a>
   <a href="about.html">About</a>
-  <a href="commissions.html">Commissions</a>
+  <a href="commissions.html" class="active">Commissions</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
   <a href="privacy.html">Privacy</a>
@@ -30,41 +30,61 @@
   <a href="shop.html">Shop</a>
   <a href="gallery.html">Gallery</a>
   <a href="about.html">About</a>
-  <a href="commissions.html">Commissions</a>
+  <a href="commissions.html" class="active">Commissions</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
 </nav>
 
 <section class="page-title">
   <h1>Commissions</h1>
-  <p>Custom artwork in the signature Myz style.</p>
+  <p>Original artwork created in the traditional Art by Myz style.</p>
 </section>
 
-<div class="contact-container">
+<!-- Commission Banner Image -->
+<div class="commission-banner">
+  <img src="assets/images/commission.png" alt="Art by Myz Commission Pricing List">
+</div>
+
+<!-- Custom Styled Pricing Section -->
+<div class="contact-container commission-section">
+
   <h2>Commission Options</h2>
-  <p>Pricing may vary with complexity, backgrounds, or additional characters.</p>
+  <p class="info-line">Hand-drawn original artwork. Pricing varies by complexity, detail, and character count.</p>
 
-  <div class="faq-item">
-    <h3>Character Portrait – $45+</h3>
-    <p>Head or bust illustration with expressive linework and stylized shading.</p>
+  <div class="commission-grid">
+
+    <div class="commission-card">
+      <h3>9” x 12” Original Pencil Sketch (B&W)</h3>
+      <p class="price">$50</p>
+      <p>Black & white pencil sketch with stylized shading.</p>
+    </div>
+
+    <div class="commission-card">
+      <h3>11” x 17” Original Piece – Black Line</h3>
+      <p class="price">$75</p>
+      <p>Bold inked rendering.<br>+ $10 per extra character</p>
+    </div>
+
+    <div class="commission-card">
+      <h3>11” x 17” Original Piece – Color</h3>
+      <p class="price">$85</p>
+      <p>Full color artwork.<br>+ $15 per extra character</p>
+    </div>
+
+    <div class="commission-card">
+      <h3>8” x 10” Original Graphite Piece</h3>
+      <p class="price">$150</p>
+      <p>Highly detailed graphite rendering.<br>Includes mat.</p>
+    </div>
+
+    <div class="commission-card full">
+      <h3>Custom Sizes & Special Projects</h3>
+      <p>Custom quotes available for unique pieces.<br><em>*Pricing does not include shipping.</em></p>
+    </div>
+
   </div>
 
-  <div class="faq-item">
-    <h3>Full Body Character – $75+</h3>
-    <p>Full character pose with clean rendering. Ideal for avatars, stream art, or personal use.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Merch / Apparel Design – $120+</h3>
-    <p>Designed with print in mind. Includes high-res and transparent files for shirts and stickers.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Logo / Brand Icon – $150+</h3>
-    <p>Vector-based logo or icon suitable for branding, channels, or events.</p>
-  </div>
-
-  <h2 style="margin-top:25px;">Submit a Commission Request</h2>
+  <h2 class="form-header">Submit a Commission Request</h2>
 
   <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="contact-form">
     <input type="hidden" name="_captcha" value="false">
@@ -76,20 +96,18 @@
     <input type="email" name="email" required>
 
     <label>Commission Type</label>
-    <input type="text" name="type" placeholder="Ex: Full Body Character, Logo" required>
+    <input type="text" name="type" placeholder="Ex: 11x17 color, graphite 8x10" required>
 
     <label>Project Details</label>
-    <textarea name="message" rows="6" placeholder="Tell me about your idea, mood, colors, and any references." required></textarea>
+    <textarea name="message" rows="6" placeholder="Describe your idea, characters, references, and important details." required></textarea>
 
-    <button type="submit">Submit Request</button>
+    <button type="submit" class="gold-btn">Submit Request</button>
   </form>
 </div>
 
 <footer>
-  © 2025 Art by Myz
-  ·
-  <a href="privacy.html">Privacy Policy</a>
-  |
+  © 2025 Art by Myz ·
+  <a href="privacy.html">Privacy Policy</a> |
   <a href="terms.html">Terms &amp; Conditions</a>
 </footer>
 

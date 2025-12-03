@@ -335,4 +335,161 @@ nav a:hover {
 }
 
 .about-text p {
-  margin-b
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ---------- COMMISSIONS PAGE ---------- */
+
+.commission-banner {
+  text-align: center;
+  margin: 25px 0 40px 0;
+}
+
+
+.commission-banner img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.45);
+}
+
+/* Grid Layout */
+.commission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.commission-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.commission-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: var(--gold);
+  box-shadow: 0 10px 20px rgba(255,215,0,0.25);
+}
+
+.commission-card.full {
+  grid-column: 1 / -1;
+}
+
+.price {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 6px 0 10px 0;
+}
+
+.info-line {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.gold-btn {
+  background-color: var(--gold);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.gold-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ---------- COMMISSION PAGE GENERAL LAYOUT ---------- */
+
+.commission-section {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+}
+
+.commission-section h2 {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+
+/* ---------- CONTACT-FORM / REQUEST FORM ---------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 6px rgba(246,190,0,0.35);
+}
+
+.form-header {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  color: var(--dark);
+}
+/* ---------- THANK YOU PAGE ---------- */
+.thanks-page {
+  background: var(--light);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.thanks-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.4);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  animation: fadeIn 0.6s ease;
+}
+
+.return-btn {
+  margin-top: 25px;
+  display: inline-block;
+}
+/* ---------- ERROR PAGE ---------- */
+
+.error-page {
+  background: var(--light);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.error-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255,0,0,0.08);
+  padding: 40px 30px;
+  border-radius: 12px;
+  border-left: 6px solid red;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  animation: fadeIn 0.6s ease;
+}
